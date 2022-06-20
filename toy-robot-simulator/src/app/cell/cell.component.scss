@@ -1,0 +1,14 @@
+:host {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .robot-image {
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+    text-align: center;
+  }
+}

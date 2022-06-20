@@ -1,0 +1,6 @@
+<img [@robotAnimation]="orientation$ | async"
+     class="robot-image"
+     src="assets/robot.png"
+     alt="robot"
+     *ngIf="hasRobot$ | async; else noRobot"/>
+<ng-template #noRobot></ng-template>

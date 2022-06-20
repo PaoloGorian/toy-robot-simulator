@@ -1,0 +1,46 @@
+<div class="board-container">
+  <h2>CONTROLS</h2>
+  <form class="place-command-form" [formGroup]=placeRobotFormGroup (ngSubmit)="onPlaceClick()">
+    <h4>PLACE COMMAND</h4>
+    <mat-form-field>
+      <mat-label>X</mat-label>
+      <input
+        matInput
+        [formControl]="xControl"
+        type="number"
+      >
+      <mat-error *ngIf="xControl.hasError">Not vaild</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Y</mat-label>
+      <input
+        matInput
+        [formControl]="yControl"
+        type="number"
+      >
+      <mat-error *ngIf="yControl.hasError">Not valid</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Orientation</mat-label>
+      <mat-select [formControl]="orientationControl">
+        <mat-option
+          *ngFor="let or of orientationEnum"
+          [value]=or
+        >
+          {{or}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="orientationControl.hasError">Not valid</mat-error>
+    </mat-form-field>
+    <br>
+    <button class="mat-flat-button" type="submit">PLACE</button>
+  </form>
+  <div class="last-move">
+    <h4>LAST MOVE</h4>
+    <p>{{ lastMove$ | async }}</p>
+  </div>
+  <div #scroll class="logs-container">
+    <h4>LOGS</h4>
+    <p *ngFor="let m of lastLogs">{{ m }}</p>
+  </div>
+</div>

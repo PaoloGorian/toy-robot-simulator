@@ -1,0 +1,27 @@
+:host {
+  border: lightgray groove 2px;
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+  }
+
+  .place-command-form, .logs-container, .last-move {
+    border: lightgray groove 2px;
+    padding: 0.75rem;
+  }
+
+  .place-command-form, .last-move {
+    margin-bottom: 1.5rem;
+  }
+
+  .last-move {
+    height: 4rem;
+  }
+
+  .logs-container {
+    white-space: pre-line;
+    height: 18.5rem;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,26 @@
+.main-container {
+  border: black groove 4px;
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  column-gap: 2rem;
+  height: 90%;
+  margin: auto;
+  padding: 2rem;
+  width: 60%;
+
+  h1 {
+    text-align: center;
+  }
+
+  .board-container {
+    border: lightgray groove 2px;
+    padding: 2rem;
+  }
+
+  .board-border {
+    background-color: lightgray;
+    border: lightgray solid 2px;
+    margin: 4rem auto auto;
+    width: 35.5rem;
+  }
+}
