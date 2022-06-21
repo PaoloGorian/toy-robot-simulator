@@ -41,7 +41,7 @@ export class ControlsComponent implements OnInit {
   ngOnInit(): void {
     this.controlsFacade.getLastLog()
       .subscribe(m => {
-        this.lastLogs.push(m);
+        this.lastLogs.unshift(m);
       });
 
     this.lastMove$ = this.controlsFacade.getLastMove();

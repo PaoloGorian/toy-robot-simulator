@@ -8,6 +8,14 @@ import {newState} from "../../helper/helper";
 
 export const controlsReducer = createReducer(
   cloneDeep(initialControlsState),
+  on(fromActions.InvalidCmd, (state, action) => {
+    const lastLog = `Invalid move to (${action.x}, ${action.y})`;
+    const lastMove = `${action.type}`;
+    return newState(state, {
+      lastLog,
+      lastMove
+    })
+  }),
   on(fromActions.LeftCmd, (state, action) => {
     const lastLog = `Successful left rotation`;
     const lastMove = `${action.type}`;

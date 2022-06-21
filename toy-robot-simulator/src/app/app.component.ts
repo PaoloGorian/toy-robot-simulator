@@ -11,6 +11,8 @@ import {BoardFacade} from "./board/store/board.facade";
 })
 export class AppComponent implements OnInit {
 
+  title = 'TOY ROBOT SIMULATOR';
+
   constructor(private boardFacade: BoardFacade) {
   }
 
